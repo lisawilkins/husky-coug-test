@@ -1,0 +1,1304 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+	<script src="build/react.development.js"></script>
+	<script src="build/react-dom.development.js"></script>
+	<script src="build/framer.js"></script>
+
+	<link href="build/Draft.css" rel="stylesheet" />
+	<link href="build/style.css" rel="stylesheet" />
+
+    <!-- Workaround for a WebKit bug: loading via URL from the stylesheet is denied if this file is loaded via file:/// -->
+    <style>
+        @font-face {
+            font-family: "Roboto Mono";
+            font-style: normal;
+            font-weight: 400;
+            src: local("Roboto Mono"), local("RobotoMono-Regular"), url("fonts/RobotoMono-Regular.ttf") format("truetype");
+        }
+    </style>
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+
+</head>
+
+<body>
+    <main></main>
+	<script src="build/standalone.js"></script>
+	
+	<script id="build_index_js">
+	(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory(require("framer"));
+	else if(typeof define === 'function' && define.amd)
+		define(["framer"], factory);
+	else {
+		var a = typeof exports === 'object' ? factory(require("framer")) : factory(root["Framer"]);
+		for(var i in a) (typeof exports === 'object' ? exports : root)[i] = a[i];
+	}
+})(window, function(__WEBPACK_EXTERNAL_MODULE_framer__) {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		try { modules[moduleId].call(module.exports, module, module.exports, __webpack_require__); } catch (error) { module.exports = { error } }
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, {
+/******/ 				configurable: false,
+/******/ 				enumerable: true,
+/******/ 				get: getter
+/******/ 			});
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/ 	// asset url
+/******/ 	var __module_i = eval("typeof module !== 'undefined' ? module.i : ''");
+/******/ 	var __framer_package = (/(node_modules[/].*)[/]build.index.js/.exec(__module_i) || [])[1]
+/******/ 	function __asset_url__(src) { return __WEBPACK_EXTERNAL_MODULE_framer__.serverURL(__framer_package, src) };
+/******/ 	installedModules['framer/resource'] = { i: 'framer/resource', l: true, exports: { url: __asset_url__ } };
+/******/
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./package.js");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./code sync recursive \\.(t|j)s(x?)|\\.css$":
+/*!***************************************!*\
+  !*** ./code sync \.(t|j)s(x?)|\.css$ ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var map = {
+	"./Examples.tsx": "./code/Examples.tsx",
+	"./TutorialSteps.tsx": "./code/TutorialSteps.tsx",
+	"./canvas.tsx": "./code/canvas.tsx"
+};
+
+
+function webpackContext(req) {
+	var id = webpackContextResolve(req);
+	var module = __webpack_require__(id);
+	return module;
+}
+function webpackContextResolve(req) {
+	var id = map[req];
+	if(!(id + 1)) { // check for number or string
+		var e = new Error('Cannot find module "' + req + '".');
+		e.code = 'MODULE_NOT_FOUND';
+		throw e;
+	}
+	return id;
+}
+webpackContext.keys = function webpackContextKeys() {
+	return Object.keys(map);
+};
+webpackContext.resolve = webpackContextResolve;
+module.exports = webpackContext;
+webpackContext.id = "./code sync recursive \\.(t|j)s(x?)|\\.css$";
+
+/***/ }),
+
+/***/ "./code/Examples.tsx":
+/*!***************************!*\
+  !*** ./code/Examples.tsx ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst framer_1 = __webpack_require__(/*! framer */ \"framer\");\nconst data = framer_1.Data({ toggle: true, scale: framer_1.Animatable(1), opacity: framer_1.Animatable(1), rotation: framer_1.Animatable(0) });\nexports.Scale = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        scale: data.scale,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            data.scale.set(0.6);\n            framer_1.animate.spring(data.scale, 1);\n        },\n    };\n};\nexports.Rotate = props => {\n    window[\"__checkBudget__\"]();\n    data.rotation.set(props.rotation);\n    return {\n        rotation: data.rotation,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.spring(data.rotation, data.rotation.get() + 90, {\n                tension: 250,\n                friction: 20,\n            });\n        },\n    };\n};\nexports.Fade = props => {\n    window[\"__checkBudget__\"]();\n    data.opacity.set(props.opacity);\n    return {\n        opacity: data.opacity,\n        onTap() {\n            window[\"__checkBudget__\"]();\n            framer_1.animate.linear(data.opacity, 0, 0.2);\n        },\n    };\n};\nexports.SwitchOutput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        opacity: data.opacity,\n        rotation: data.rotation,\n    };\n};\nexports.SwitchInput = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            const toggle = data.toggle;\n            framer_1.animate.spring({ opacity: data.opacity, rotation: data.rotation }, {\n                opacity: toggle ? 0.5 : 1,\n                rotation: toggle ? 360 : 0,\n            }, { tension: 200, friction: 20 });\n            data.toggle = !toggle;\n        },\n    };\n};\nexports.__info__ = [{ name: \"Scale\", type: \"override\" }, { name: \"Rotate\", type: \"override\" }, { name: \"Fade\", type: \"override\" }, { name: \"SwitchOutput\", type: \"override\" }, { name: \"SwitchInput\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL0V4YW1wbGVzLnRzeCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtBQUNBLDhDQUE4QyxjQUFjO0FBQzVEO0FBQ0EsNEJBQTRCLGlIQUFpSDtBQUM3STtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EsU0FBUztBQUNUO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLGFBQWE7QUFDYixTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQSxTQUFTO0FBQ1Q7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EscUNBQXFDLGlEQUFpRDtBQUN0RjtBQUNBO0FBQ0EsYUFBYSxHQUFHLDZCQUE2QjtBQUM3QztBQUNBLFNBQVM7QUFDVDtBQUNBO0FBQ0EscUJBQXFCLGtDQUFrQyxHQUFHLG1DQUFtQyxHQUFHLGlDQUFpQyxHQUFHLHlDQUF5QyxHQUFHLHdDQUF3QyIsImZpbGUiOiIuL2NvZGUvRXhhbXBsZXMudHN4LmpzIiwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2Ugc3RyaWN0XCI7XG5PYmplY3QuZGVmaW5lUHJvcGVydHkoZXhwb3J0cywgXCJfX2VzTW9kdWxlXCIsIHsgdmFsdWU6IHRydWUgfSk7XG5jb25zdCBmcmFtZXJfMSA9IHJlcXVpcmUoXCJmcmFtZXJcIik7XG5jb25zdCBkYXRhID0gZnJhbWVyXzEuRGF0YSh7IHRvZ2dsZTogdHJ1ZSwgc2NhbGU6IGZyYW1lcl8xLkFuaW1hdGFibGUoMSksIG9wYWNpdHk6IGZyYW1lcl8xLkFuaW1hdGFibGUoMSksIHJvdGF0aW9uOiBmcmFtZXJfMS5BbmltYXRhYmxlKDApIH0pO1xuZXhwb3J0cy5TY2FsZSA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBzY2FsZTogZGF0YS5zY2FsZSxcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIGRhdGEuc2NhbGUuc2V0KDAuNik7XG4gICAgICAgICAgICBmcmFtZXJfMS5hbmltYXRlLnNwcmluZyhkYXRhLnNjYWxlLCAxKTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuUm90YXRlID0gcHJvcHMgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIGRhdGEucm90YXRpb24uc2V0KHByb3BzLnJvdGF0aW9uKTtcbiAgICByZXR1cm4ge1xuICAgICAgICByb3RhdGlvbjogZGF0YS5yb3RhdGlvbixcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKGRhdGEucm90YXRpb24sIGRhdGEucm90YXRpb24uZ2V0KCkgKyA5MCwge1xuICAgICAgICAgICAgICAgIHRlbnNpb246IDI1MCxcbiAgICAgICAgICAgICAgICBmcmljdGlvbjogMjAsXG4gICAgICAgICAgICB9KTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuRmFkZSA9IHByb3BzID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICBkYXRhLm9wYWNpdHkuc2V0KHByb3BzLm9wYWNpdHkpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9wYWNpdHk6IGRhdGEub3BhY2l0eSxcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUubGluZWFyKGRhdGEub3BhY2l0eSwgMCwgMC4yKTtcbiAgICAgICAgfSxcbiAgICB9O1xufTtcbmV4cG9ydHMuU3dpdGNoT3V0cHV0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9wYWNpdHk6IGRhdGEub3BhY2l0eSxcbiAgICAgICAgcm90YXRpb246IGRhdGEucm90YXRpb24sXG4gICAgfTtcbn07XG5leHBvcnRzLlN3aXRjaElucHV0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICBjb25zdCB0b2dnbGUgPSBkYXRhLnRvZ2dsZTtcbiAgICAgICAgICAgIGZyYW1lcl8xLmFuaW1hdGUuc3ByaW5nKHsgb3BhY2l0eTogZGF0YS5vcGFjaXR5LCByb3RhdGlvbjogZGF0YS5yb3RhdGlvbiB9LCB7XG4gICAgICAgICAgICAgICAgb3BhY2l0eTogdG9nZ2xlID8gMC41IDogMSxcbiAgICAgICAgICAgICAgICByb3RhdGlvbjogdG9nZ2xlID8gMzYwIDogMCxcbiAgICAgICAgICAgIH0sIHsgdGVuc2lvbjogMjAwLCBmcmljdGlvbjogMjAgfSk7XG4gICAgICAgICAgICBkYXRhLnRvZ2dsZSA9ICF0b2dnbGU7XG4gICAgICAgIH0sXG4gICAgfTtcbn07XG5leHBvcnRzLl9faW5mb19fID0gW3sgbmFtZTogXCJTY2FsZVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIlJvdGF0ZVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcIkZhZGVcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJTd2l0Y2hPdXRwdXRcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJTd2l0Y2hJbnB1dFwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfV07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./code/Examples.tsx\n");
+
+/***/ }),
+
+/***/ "./code/TutorialSteps.tsx":
+/*!********************************!*\
+  !*** ./code/TutorialSteps.tsx ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nconst tutorial = window[\"tutorial\"] || { do: () => { window[\"__checkBudget__\"](); } };\nexports.step1 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: \"step1\" });\n        }\n    };\n};\nexports.step2 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step2\"] });\n        }\n    };\n};\nexports.step3 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step3a\", \"step3b\"] });\n        }\n    };\n};\nexports.step4 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step4a\", \"step4b\"] });\n        }\n    };\n};\nexports.step5 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step5a\", \"step5b\"] });\n        }\n    };\n};\nexports.step6 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step6a\", \"step6b\"] });\n        }\n    };\n};\nexports.step7 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step7\", \"image1\", \"image2\", \"image3\"] });\n        }\n    };\n};\nexports.step8 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: \"step8\" });\n        }\n    };\n};\nexports.step9 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: [\"step9a\", \"step9b\"] });\n        }\n    };\n};\nexports.step10 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: \"step10\" });\n        }\n    };\n};\nexports.step11 = () => {\n    window[\"__checkBudget__\"]();\n    return {\n        onTap() {\n            window[\"__checkBudget__\"]();\n            tutorial.do({ show: \"step11\" });\n        }\n    };\n};\nexports.__info__ = [{ name: \"step1\", type: \"override\" }, { name: \"step2\", type: \"override\" }, { name: \"step3\", type: \"override\" }, { name: \"step4\", type: \"override\" }, { name: \"step5\", type: \"override\" }, { name: \"step6\", type: \"override\" }, { name: \"step7\", type: \"override\" }, { name: \"step8\", type: \"override\" }, { name: \"step9\", type: \"override\" }, { name: \"step10\", type: \"override\" }, { name: \"step11\", type: \"override\" }];\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vLi9jb2RlL1R1dG9yaWFsU3RlcHMudHN4Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0FBQ0EsOENBQThDLGNBQWM7QUFDNUQsd0NBQXdDLFlBQVksNkJBQTZCLEVBQUU7QUFDbkY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixnQkFBZ0I7QUFDekM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixrQkFBa0I7QUFDM0M7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5Qiw2QkFBNkI7QUFDdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5Qiw2QkFBNkI7QUFDdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5Qiw2QkFBNkI7QUFDdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5Qiw2QkFBNkI7QUFDdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixnREFBZ0Q7QUFDekU7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixnQkFBZ0I7QUFDekM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5Qiw2QkFBNkI7QUFDdEQ7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixpQkFBaUI7QUFDMUM7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLHlCQUF5QixpQkFBaUI7QUFDMUM7QUFDQTtBQUNBO0FBQ0EscUJBQXFCLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLGtDQUFrQyxHQUFHLG1DQUFtQyxHQUFHLG1DQUFtQyIsImZpbGUiOiIuL2NvZGUvVHV0b3JpYWxTdGVwcy50c3guanMiLCJzb3VyY2VzQ29udGVudCI6WyJcInVzZSBzdHJpY3RcIjtcbk9iamVjdC5kZWZpbmVQcm9wZXJ0eShleHBvcnRzLCBcIl9fZXNNb2R1bGVcIiwgeyB2YWx1ZTogdHJ1ZSB9KTtcbmNvbnN0IHR1dG9yaWFsID0gd2luZG93W1widHV0b3JpYWxcIl0gfHwgeyBkbzogKCkgPT4geyB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTsgfSB9O1xuZXhwb3J0cy5zdGVwMSA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvblRhcCgpIHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgdHV0b3JpYWwuZG8oeyBzaG93OiBcInN0ZXAxXCIgfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuc3RlcDIgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIHR1dG9yaWFsLmRvKHsgc2hvdzogW1wic3RlcDJcIl0gfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuc3RlcDMgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIHR1dG9yaWFsLmRvKHsgc2hvdzogW1wic3RlcDNhXCIsIFwic3RlcDNiXCJdIH0pO1xuICAgICAgICB9XG4gICAgfTtcbn07XG5leHBvcnRzLnN0ZXA0ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICB0dXRvcmlhbC5kbyh7IHNob3c6IFtcInN0ZXA0YVwiLCBcInN0ZXA0YlwiXSB9KTtcbiAgICAgICAgfVxuICAgIH07XG59O1xuZXhwb3J0cy5zdGVwNSA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvblRhcCgpIHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgdHV0b3JpYWwuZG8oeyBzaG93OiBbXCJzdGVwNWFcIiwgXCJzdGVwNWJcIl0gfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuc3RlcDYgPSAoKSA9PiB7XG4gICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgcmV0dXJuIHtcbiAgICAgICAgb25UYXAoKSB7XG4gICAgICAgICAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICAgICAgICAgIHR1dG9yaWFsLmRvKHsgc2hvdzogW1wic3RlcDZhXCIsIFwic3RlcDZiXCJdIH0pO1xuICAgICAgICB9XG4gICAgfTtcbn07XG5leHBvcnRzLnN0ZXA3ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICB0dXRvcmlhbC5kbyh7IHNob3c6IFtcInN0ZXA3XCIsIFwiaW1hZ2UxXCIsIFwiaW1hZ2UyXCIsIFwiaW1hZ2UzXCJdIH0pO1xuICAgICAgICB9XG4gICAgfTtcbn07XG5leHBvcnRzLnN0ZXA4ID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICB0dXRvcmlhbC5kbyh7IHNob3c6IFwic3RlcDhcIiB9KTtcbiAgICAgICAgfVxuICAgIH07XG59O1xuZXhwb3J0cy5zdGVwOSA9ICgpID0+IHtcbiAgICB3aW5kb3dbXCJfX2NoZWNrQnVkZ2V0X19cIl0oKTtcbiAgICByZXR1cm4ge1xuICAgICAgICBvblRhcCgpIHtcbiAgICAgICAgICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgICAgICAgICAgdHV0b3JpYWwuZG8oeyBzaG93OiBbXCJzdGVwOWFcIiwgXCJzdGVwOWJcIl0gfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuc3RlcDEwID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICB0dXRvcmlhbC5kbyh7IHNob3c6IFwic3RlcDEwXCIgfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuc3RlcDExID0gKCkgPT4ge1xuICAgIHdpbmRvd1tcIl9fY2hlY2tCdWRnZXRfX1wiXSgpO1xuICAgIHJldHVybiB7XG4gICAgICAgIG9uVGFwKCkge1xuICAgICAgICAgICAgd2luZG93W1wiX19jaGVja0J1ZGdldF9fXCJdKCk7XG4gICAgICAgICAgICB0dXRvcmlhbC5kbyh7IHNob3c6IFwic3RlcDExXCIgfSk7XG4gICAgICAgIH1cbiAgICB9O1xufTtcbmV4cG9ydHMuX19pbmZvX18gPSBbeyBuYW1lOiBcInN0ZXAxXCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwic3RlcDJcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJzdGVwM1wiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcInN0ZXA0XCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwic3RlcDVcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJzdGVwNlwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcInN0ZXA3XCIsIHR5cGU6IFwib3ZlcnJpZGVcIiB9LCB7IG5hbWU6IFwic3RlcDhcIiwgdHlwZTogXCJvdmVycmlkZVwiIH0sIHsgbmFtZTogXCJzdGVwOVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcInN0ZXAxMFwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfSwgeyBuYW1lOiBcInN0ZXAxMVwiLCB0eXBlOiBcIm92ZXJyaWRlXCIgfV07XG4iXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./code/TutorialSteps.tsx\n");
+
+/***/ }),
+
+/***/ "./code/canvas.tsx":
+/*!*************************!*\
+  !*** ./code/canvas.tsx ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", { value: true });
+// WARNING: this file is auto generated, any changes will be lost
+const framer_1 = __webpack_require__(/*! framer */ "framer");
+const canvas = framer_1.CanvasStore.shared(); // CANVAS_DATA;
+
+
+/***/ }),
+
+/***/ "./package.js":
+/*!********************!*\
+  !*** ./package.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// The template for the dynamic webpack entry. Be aware of the variables
+
+const packageJson = __webpack_require__(/*! ./package.json */ "./package.json")
+
+const package = {
+    packageJson,
+    sourceModules: {},
+    dependencies: {},
+}
+
+// This is a special webpack thing that watches the whole directory
+// https://github.com/webpack/docs/wiki/context
+const ctx = __webpack_require__("./code sync recursive \\.(t|j)s(x?)|\\.css$")
+
+ctx.keys().forEach(key => {
+    package.sourceModules[key] = () => ctx(key)
+})
+
+// The packages are passed in through a template
+const packages = {}
+
+                packages["framer"] = () => {
+                    var package = {}
+                    try {
+                        package = __webpack_require__(/*! framer */ "framer")
+                    } catch (e) {
+                        console.log(e)
+                    }
+                    package.__framer__ = package.__framer__ || {}
+                    package.__framer__.packageJson = {"name":"framer","version":"0.9.2","main":"build/framer.js","types":"build/framer.d.ts","author":"Framer","license":"MIT","scripts":{"coverage":"jest --config jest.json --coverage","test":"jest --config jest.json","watch":"jest --config jest.json --watch"},"dependencies":{"draft-js":"0.10.4","eventemitter3":"^3.1.0","hsluv":"^0.0.3","immutable":"^3.8.2"},"devDependencies":{"@types/chalk":"^2.2.0","@types/draft-js":"0.10.19","@types/enzyme":"^3.1.10","@types/hsluv":"https://github.com/framer/typed_hsluv#bump","@types/jest":"^23.0.0","@types/jest-diff":"^20.0.0","@types/node":"^9.6.0","@types/react":"^16.0.0","@types/react-dom":"^16.0.0","cache-loader":"^1.2.2","chalk":"^2.4.1","convert-tsconfig-paths-to-webpack-aliases":"^0.9.2","css.escape":"^1.5.1","dts-bundle":"^0.7.3","enzyme":"^3.3.0","enzyme-adapter-react-16":"^1.1.1","fork-ts-checker-webpack-plugin":"^0.4.1","hoist-non-react-statics":"^2.5.0","jest":"^23.1.0","jest-diff":"^22.0.3","jest-junit":"^3.4.1","progress-bar-webpack-plugin":"^1.11.0","raf":"^3.4.0","react":"^16.5.0","react-dev-utils":"^5.0.1","react-dom":"^16.5.0","ts-jest":"^22.4.5","ts-loader":"^4.1.0","typescript":"^3.0.1","watch":"^1.0.2","webpack":"^4.4.1","webpack-cli":"^2.0.13","webpack-dev-server":"^3.1.4","xcssmatrix":"^0.2.2"},"peerDependencies":{"react":"^16.5.0","react-dom":"^16.5.0"},"framer":{"components":[{"name":"Scroll","children":true,"properties":[{"key":"direction","title":"Direction","kind":"enum","options":["horizontal","vertical","both"]}]},{"name":"Page"},{"name":"Stack"},{"name":"FramerAppleWatch38","type":"device"},{"name":"FramerAppleWatch42","type":"device"},{"name":"FramerSonySmartWatch","type":"device"},{"name":"FramerAppleIPhoneSE","type":"device"},{"name":"FramerAppleIPhone8","type":"device"},{"name":"FramerAppleIPhone8Plus","type":"device"},{"name":"FramerAppleIPhoneX","type":"device"},{"name":"FramerGoogleNexus4","type":"device"},{"name":"FramerGoogleNexus5X","type":"device"},{"name":"FramerGoogleNexus6","type":"device"},{"name":"FramerGooglePixel2","type":"device"},{"name":"FramerGooglePixel2XL","type":"device"},{"name":"FramerHTCOneA9","type":"device"},{"name":"FramerMicrosoftLumia950","type":"device"},{"name":"FramerSamsungNote5","type":"device"},{"name":"FramerSamsungGalaxyS8","type":"device"},{"name":"FramerAppleIPadAir","type":"device"},{"name":"FramerAppleIPadMini","type":"device"},{"name":"FramerAppleIPadPro","type":"device"},{"name":"FramerGoogleNexusTablet","type":"device"},{"name":"FramerMicrosoftSurfacePro3","type":"device"},{"name":"FramerMicrosoftSurfacePro4","type":"device"},{"name":"FramerAppleIMac","type":"device"},{"name":"FramerAppleThunderboltDisplay","type":"device"},{"name":"FramerAppleMacBook","type":"device"},{"name":"FramerAppleMacBookAir","type":"device"},{"name":"FramerAppleMacBookPro","type":"device"},{"name":"FramerDellXPS","type":"device"},{"name":"FramerMicrosoftSurfaceBook","type":"device"},{"name":"FramerSonyW850C","type":"device"}]}}
+                    return package
+                }
+
+package.dependencies = packages
+
+exports.__framer__ = package
+
+
+/***/ }),
+
+/***/ "./package.json":
+/*!**********************!*\
+  !*** ./package.json ***!
+  \**********************/
+/*! exports provided: main, license, devDependencies, peerDependencies, framer, author, dependencies, default */
+/***/ (function(module) {
+
+module.exports = {"main":"build/index.js","license":"MIT","devDependencies":{"@types/react":"^16.0.31","framer":"^0.9.2"},"peerDependencies":{"framer":"^0.9.2","react":"^16.3.0","react-dom":"^16.3.0"},"framer":{"id":"a59cb255-7d1b-46f7-87e1-6313c38c2aa6"},"author":"Google  ","dependencies":{}};
+
+/***/ }),
+
+/***/ "framer":
+/*!******************************************************************************************!*\
+  !*** external {"root":"Framer","commonjs2":"framer","commonjs":"framer","amd":"framer"} ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = __WEBPACK_EXTERNAL_MODULE_framer__;
+
+/***/ })
+
+/******/ });
+});
+	</script>
+	
+	<script>
+	const data = {
+  "presentationNode": {
+    "componentClass": "Frame",
+    "props": {
+      "key": "JGhKO4OsK",
+      "id": "id_JGhKO4OsK",
+      "willChangeTransform": false,
+      "opacity": 1,
+      "radius": 0,
+      "rotation": 0,
+      "visible": true,
+      "overflow": "hidden",
+      "background": {
+        "alpha": 1,
+        "angle": 0,
+        "start": "hsl(0, 100%, 26%)",
+        "end": "rgba(51, 42, 134, 1.00)",
+        "__class": "LinearGradient"
+      },
+      "shadows": [],
+      "left": -450,
+      "right": null,
+      "top": 0,
+      "bottom": null,
+      "width": 414,
+      "height": 736,
+      "aspectRatio": null,
+      "centerX": "31.642512077294686%",
+      "centerY": "50%",
+      "parentSize": null
+    },
+    "children": [
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "R4lpkgQtZ",
+          "id": "id_R4lpkgQtZ",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 62,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 249.64499999999995,
+            "g": 80.07000000000001,
+            "b": 46.155000000000015,
+            "a": 0.5,
+            "h": 10,
+            "s": 0.95,
+            "l": 0.58,
+            "initialValue": "hsla(10, 95%, 58%, 0.5)",
+            "roundA": 0.5,
+            "format": "hsl"
+          },
+          "shadows": [],
+          "left": 72,
+          "right": 72,
+          "top": null,
+          "bottom": 272,
+          "width": 270,
+          "height": 62,
+          "aspectRatio": null,
+          "centerX": "50%",
+          "centerY": "58.83152173913043%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Text",
+            "props": {
+              "key": "qcJZp7vum",
+              "id": "id_qcJZp7vum",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "autoSize": true,
+              "size": {
+                "width": 62,
+                "height": 25
+              },
+              "shadows": [],
+              "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">COUGS</span></span></div>",
+              "left": null,
+              "right": null,
+              "top": null,
+              "bottom": null,
+              "width": 62,
+              "height": 25,
+              "aspectRatio": null,
+              "centerX": "50%",
+              "centerY": "49.193548387096776%",
+              "parentSize": null
+            }
+          }
+        ],
+        "navigationLink": {
+          "navigationTarget": "EkD4aiLmX",
+          "navigationTransition": "push",
+          "navigationTransitionDirection": "left",
+          "navigationTransitionOverrides": {
+            "backdropColor": "rgba(4,4,15,.4)"
+          }
+        }
+      },
+      {
+        "componentClass": "Frame",
+        "props": {
+          "key": "pdNGWJmaC",
+          "id": "id_pdNGWJmaC",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "radius": 62,
+          "rotation": 0,
+          "visible": true,
+          "overflow": "visible",
+          "background": {
+            "r": 108.27300000000008,
+            "g": 68.64600000000003,
+            "b": 227.15399999999994,
+            "a": 1,
+            "h": 255,
+            "s": 0.74,
+            "l": 0.58,
+            "initialValue": "hsl(255, 74%, 58%)",
+            "roundA": 1,
+            "format": "hsl"
+          },
+          "shadows": [],
+          "left": 72,
+          "right": 72,
+          "top": 314,
+          "bottom": null,
+          "width": 270,
+          "height": 62,
+          "aspectRatio": null,
+          "centerX": "50%",
+          "centerY": "46.875%",
+          "parentSize": null
+        },
+        "children": [
+          {
+            "componentClass": "Text",
+            "props": {
+              "key": "A9_YaLuxn",
+              "id": "id_A9_YaLuxn",
+              "willChangeTransform": false,
+              "opacity": 1,
+              "rotation": 0,
+              "visible": true,
+              "autoSize": true,
+              "size": {
+                "width": 77,
+                "height": 25
+              },
+              "shadows": [],
+              "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">HUSKIES</span></span></div>",
+              "left": null,
+              "right": null,
+              "top": null,
+              "bottom": null,
+              "width": 77,
+              "height": 25,
+              "aspectRatio": null,
+              "centerX": "50%",
+              "centerY": "49.193548387096776%",
+              "parentSize": null
+            }
+          }
+        ],
+        "navigationLink": {
+          "navigationTarget": "HDTbb4X5a",
+          "navigationTransition": "push",
+          "navigationTransitionDirection": "left",
+          "navigationTransitionOverrides": {
+            "backdropColor": "rgba(4,4,15,.4)"
+          }
+        }
+      },
+      {
+        "componentClass": "Text",
+        "props": {
+          "key": "zPvUPhiep",
+          "id": "id_zPvUPhiep",
+          "willChangeTransform": false,
+          "opacity": 1,
+          "rotation": 0,
+          "visible": true,
+          "autoSize": false,
+          "size": {
+            "width": 354,
+            "height": 114
+          },
+          "shadows": [],
+          "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"e3fbt-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"e3fbt-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:48px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Who will win the APPLE CUP?</span></span></div></div>",
+          "alignment": "center",
+          "left": 30,
+          "right": 31,
+          "top": 135,
+          "bottom": null,
+          "width": 353,
+          "height": 114,
+          "aspectRatio": null,
+          "centerX": "49.8792270531401%",
+          "centerY": "26.08695652173913%",
+          "parentSize": null
+        }
+      }
+    ]
+  },
+  "metadata": {
+    "name": "open",
+    "id": "JGhKO4OsK",
+    "width": 414,
+    "height": 736,
+    "settings": {
+      "deviceType": "framer/FramerAppleIPhone8Plus",
+      "deviceDescriptor": {
+        "hands": {
+          "Hand 1": {
+            "package": "@framer/framer.device-hand-iphone-1",
+            "width": 3949,
+            "height": 6154,
+            "offset": -15
+          },
+          "Hand 2": {
+            "package": "@framer/framer.device-hand-iphone-2",
+            "width": 3949,
+            "height": 6154,
+            "offset": -15
+          }
+        },
+        "pixelRatio": 3,
+        "canRotate": true,
+        "screen": {
+          "width": 1242,
+          "height": 2208
+        },
+        "kind": "phone",
+        "skins": {
+          "Space Gray": {
+            "package": "@framer/framer.device-skin-apple-iphone8-plus-space-gray"
+          },
+          "Silver": {
+            "package": "@framer/framer.device-skin-apple-iphone8-plus-silver"
+          },
+          "Gold": {
+            "package": "@framer/framer.device-skin-apple-iphone8-plus-gold"
+          }
+        },
+        "title": "Framer Bezel Apple iPhone 8 Plus",
+        "category": "Framer Bezel",
+        "selector": "Apple iPhone 8 Plus"
+      },
+      "zoom": -1,
+      "rotate": false,
+      "bezel": false,
+      "responsive": false,
+      "touch": true,
+      "__class": "PreviewSettings"
+    }
+  },
+  "navigation": {
+    "EkD4aiLmX": {
+      "componentClass": "Frame",
+      "props": {
+        "key": "EkD4aiLmX",
+        "id": "id_EkD4aiLmX",
+        "willChangeTransform": false,
+        "opacity": 1,
+        "radius": 0,
+        "rotation": 0,
+        "visible": true,
+        "overflow": "hidden",
+        "background": {
+          "r": 51,
+          "g": 42,
+          "b": 134,
+          "a": 1,
+          "h": 245.86956521739128,
+          "s": 0.5227272727272728,
+          "l": 0.34509803921568627,
+          "initialValue": "rgba(51, 42, 134, 1.00)",
+          "roundA": 1,
+          "format": "rgb"
+        },
+        "shadows": [],
+        "left": 0,
+        "right": null,
+        "top": 448,
+        "bottom": null,
+        "width": 414,
+        "height": 736,
+        "aspectRatio": null,
+        "centerX": "0%",
+        "centerY": "0%",
+        "parentSize": null
+      },
+      "children": [
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "IDoTghYS3",
+            "id": "id_IDoTghYS3",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 0,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "src": "oYlM6eMOETUMNwzM9fJavN13k.png",
+              "pixelWidth": 553,
+              "pixelHeight": 800,
+              "intrinsicWidth": 276.5,
+              "intrinsicHeight": 400,
+              "fit": "fill"
+            },
+            "shadows": [],
+            "dropShadows": [],
+            "left": 68,
+            "right": 69,
+            "top": null,
+            "bottom": null,
+            "width": 277,
+            "height": 400,
+            "aspectRatio": 0.69125,
+            "centerX": "49.8792270531401%",
+            "centerY": "50%",
+            "parentSize": null
+          },
+          "children": []
+        },
+        {
+          "componentClass": "Text",
+          "props": {
+            "key": "IO1i3bdFK",
+            "id": "id_IO1i3bdFK",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "rotation": 0,
+            "visible": true,
+            "autoSize": false,
+            "size": {
+              "width": 203,
+              "height": 72
+            },
+            "shadows": [],
+            "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"5nree-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"5nree-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:60px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">NOPE!</span></span></div></div>",
+            "alignment": "center",
+            "left": null,
+            "right": null,
+            "top": 64,
+            "bottom": null,
+            "width": 202,
+            "height": 70,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "13.451086956521738%",
+            "parentSize": null
+          }
+        },
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "wNyTYsWqi",
+            "id": "id_wNyTYsWqi",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 0,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "src": "RXH2vPDhshDUbg16dk1ZPltQKfE",
+              "pixelWidth": 1470,
+              "pixelHeight": 1788,
+              "intrinsicWidth": 735,
+              "intrinsicHeight": 894,
+              "fit": "fill"
+            },
+            "shadows": [],
+            "dropShadows": [],
+            "left": 36,
+            "right": 25,
+            "top": null,
+            "bottom": 148,
+            "width": 353,
+            "height": 429,
+            "aspectRatio": 0.8221476510067114,
+            "centerX": "51.328502415458935%",
+            "centerY": "50.747282608695656%",
+            "parentSize": null
+          },
+          "children": []
+        },
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "yCldJQ0BM",
+            "id": "id_yCldJQ0BM",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 62,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.5,
+              "h": 0,
+              "s": 0,
+              "l": 0,
+              "initialValue": "hsla(0, 0%, 0%, 0.5)",
+              "roundA": 0.5,
+              "format": "hsl"
+            },
+            "shadows": [],
+            "left": 72,
+            "right": 72,
+            "top": null,
+            "bottom": 36,
+            "width": 270,
+            "height": 62,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "90.89673913043478%",
+            "parentSize": null
+          },
+          "children": [
+            {
+              "componentClass": "Text",
+              "props": {
+                "key": "ITzcUnQYB",
+                "id": "id_ITzcUnQYB",
+                "willChangeTransform": false,
+                "opacity": 1,
+                "rotation": 0,
+                "visible": true,
+                "autoSize": true,
+                "size": {
+                  "width": 101,
+                  "height": 25
+                },
+                "shadows": [],
+                "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">TRY AGAIN!</span></span></div>",
+                "left": null,
+                "right": 82,
+                "top": null,
+                "bottom": null,
+                "width": 101,
+                "height": 25,
+                "aspectRatio": null,
+                "centerX": "50.92592592592593%",
+                "centerY": "49.193548387096776%",
+                "parentSize": null
+              }
+            }
+          ],
+          "navigationLink": {
+            "navigationTarget": "JGhKO4OsK",
+            "navigationTransition": "push",
+            "navigationTransitionDirection": "right",
+            "navigationTransitionOverrides": {
+              "backdropColor": "rgba(4,4,15,.4)"
+            }
+          }
+        }
+      ]
+    },
+    "JGhKO4OsK": {
+      "componentClass": "Frame",
+      "props": {
+        "key": "JGhKO4OsK",
+        "id": "id_JGhKO4OsK",
+        "willChangeTransform": false,
+        "opacity": 1,
+        "radius": 0,
+        "rotation": 0,
+        "visible": true,
+        "overflow": "hidden",
+        "background": {
+          "alpha": 1,
+          "angle": 0,
+          "start": "hsl(0, 100%, 26%)",
+          "end": "rgba(51, 42, 134, 1.00)",
+          "__class": "LinearGradient"
+        },
+        "shadows": [],
+        "left": -450,
+        "right": null,
+        "top": 0,
+        "bottom": null,
+        "width": 414,
+        "height": 736,
+        "aspectRatio": null,
+        "centerX": "31.642512077294686%",
+        "centerY": "50%",
+        "parentSize": null
+      },
+      "children": [
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "R4lpkgQtZ",
+            "id": "id_R4lpkgQtZ",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 62,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "r": 249.64499999999995,
+              "g": 80.07000000000001,
+              "b": 46.155000000000015,
+              "a": 0.5,
+              "h": 10,
+              "s": 0.95,
+              "l": 0.58,
+              "initialValue": "hsla(10, 95%, 58%, 0.5)",
+              "roundA": 0.5,
+              "format": "hsl"
+            },
+            "shadows": [],
+            "left": 72,
+            "right": 72,
+            "top": null,
+            "bottom": 272,
+            "width": 270,
+            "height": 62,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "58.83152173913043%",
+            "parentSize": null
+          },
+          "children": [
+            {
+              "componentClass": "Text",
+              "props": {
+                "key": "qcJZp7vum",
+                "id": "id_qcJZp7vum",
+                "willChangeTransform": false,
+                "opacity": 1,
+                "rotation": 0,
+                "visible": true,
+                "autoSize": true,
+                "size": {
+                  "width": 62,
+                  "height": 25
+                },
+                "shadows": [],
+                "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">COUGS</span></span></div>",
+                "left": null,
+                "right": null,
+                "top": null,
+                "bottom": null,
+                "width": 62,
+                "height": 25,
+                "aspectRatio": null,
+                "centerX": "50%",
+                "centerY": "49.193548387096776%",
+                "parentSize": null
+              }
+            }
+          ],
+          "navigationLink": {
+            "navigationTarget": "EkD4aiLmX",
+            "navigationTransition": "push",
+            "navigationTransitionDirection": "left",
+            "navigationTransitionOverrides": {
+              "backdropColor": "rgba(4,4,15,.4)"
+            }
+          }
+        },
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "pdNGWJmaC",
+            "id": "id_pdNGWJmaC",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 62,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "r": 108.27300000000008,
+              "g": 68.64600000000003,
+              "b": 227.15399999999994,
+              "a": 1,
+              "h": 255,
+              "s": 0.74,
+              "l": 0.58,
+              "initialValue": "hsl(255, 74%, 58%)",
+              "roundA": 1,
+              "format": "hsl"
+            },
+            "shadows": [],
+            "left": 72,
+            "right": 72,
+            "top": 314,
+            "bottom": null,
+            "width": 270,
+            "height": 62,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "46.875%",
+            "parentSize": null
+          },
+          "children": [
+            {
+              "componentClass": "Text",
+              "props": {
+                "key": "A9_YaLuxn",
+                "id": "id_A9_YaLuxn",
+                "willChangeTransform": false,
+                "opacity": 1,
+                "rotation": 0,
+                "visible": true,
+                "autoSize": true,
+                "size": {
+                  "width": 77,
+                  "height": 25
+                },
+                "shadows": [],
+                "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">HUSKIES</span></span></div>",
+                "left": null,
+                "right": null,
+                "top": null,
+                "bottom": null,
+                "width": 77,
+                "height": 25,
+                "aspectRatio": null,
+                "centerX": "50%",
+                "centerY": "49.193548387096776%",
+                "parentSize": null
+              }
+            }
+          ],
+          "navigationLink": {
+            "navigationTarget": "HDTbb4X5a",
+            "navigationTransition": "push",
+            "navigationTransitionDirection": "left",
+            "navigationTransitionOverrides": {
+              "backdropColor": "rgba(4,4,15,.4)"
+            }
+          }
+        },
+        {
+          "componentClass": "Text",
+          "props": {
+            "key": "zPvUPhiep",
+            "id": "id_zPvUPhiep",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "rotation": 0,
+            "visible": true,
+            "autoSize": false,
+            "size": {
+              "width": 354,
+              "height": 114
+            },
+            "shadows": [],
+            "rawHTML": "<div class='DraftEditor-alignCenter'><div data-offset-key=\"e3fbt-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"e3fbt-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:48px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">Who will win the APPLE CUP?</span></span></div></div>",
+            "alignment": "center",
+            "left": 30,
+            "right": 31,
+            "top": 135,
+            "bottom": null,
+            "width": 353,
+            "height": 114,
+            "aspectRatio": null,
+            "centerX": "49.8792270531401%",
+            "centerY": "26.08695652173913%",
+            "parentSize": null
+          }
+        }
+      ]
+    },
+    "HDTbb4X5a": {
+      "componentClass": "Frame",
+      "props": {
+        "key": "HDTbb4X5a",
+        "id": "id_HDTbb4X5a",
+        "willChangeTransform": false,
+        "opacity": 1,
+        "radius": 0,
+        "rotation": 0,
+        "visible": true,
+        "overflow": "hidden",
+        "background": {
+          "r": 51,
+          "g": 42,
+          "b": 134,
+          "a": 1,
+          "h": 245.86956521739128,
+          "s": 0.5227272727272728,
+          "l": 0.34509803921568627,
+          "initialValue": "rgba(51, 42, 134, 1.00)",
+          "roundA": 1,
+          "format": "rgb"
+        },
+        "shadows": [],
+        "left": 0,
+        "right": null,
+        "top": -340,
+        "bottom": null,
+        "width": 414,
+        "height": 736,
+        "aspectRatio": null,
+        "centerX": "0%",
+        "centerY": "0%",
+        "parentSize": null
+      },
+      "children": [
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "mQS3hF5Mk",
+            "id": "id_mQS3hF5Mk",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 0,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "src": "oYlM6eMOETUMNwzM9fJavN13k.png",
+              "pixelWidth": 553,
+              "pixelHeight": 800,
+              "intrinsicWidth": 276.5,
+              "intrinsicHeight": 400,
+              "fit": "fill"
+            },
+            "shadows": [],
+            "dropShadows": [],
+            "left": 68,
+            "right": 69,
+            "top": null,
+            "bottom": null,
+            "width": 277,
+            "height": 400,
+            "aspectRatio": 0.69125,
+            "centerX": "49.8792270531401%",
+            "centerY": "50%",
+            "parentSize": null
+          },
+          "children": [
+            {
+              "componentClass": "Frame",
+              "props": {
+                "key": "aGoFai4FJ",
+                "id": "id_aGoFai4FJ",
+                "willChangeTransform": false,
+                "opacity": 1,
+                "radius": 0,
+                "rotation": 0,
+                "visible": true,
+                "overflow": "visible",
+                "background": {
+                  "src": "RXH2vPDhshDUbg16dk1ZPltQKfE",
+                  "pixelWidth": 1470,
+                  "pixelHeight": 1788,
+                  "intrinsicWidth": 735,
+                  "intrinsicHeight": 894,
+                  "fit": "fill"
+                },
+                "shadows": [],
+                "dropShadows": [],
+                "left": -46,
+                "right": -47,
+                "top": null,
+                "bottom": -38,
+                "width": 370,
+                "height": 450,
+                "aspectRatio": 0.8221476510067114,
+                "centerX": "50.18050541516246%",
+                "centerY": "53.25%",
+                "parentSize": null
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "componentClass": "Text",
+          "props": {
+            "key": "oiDuE9RFQ",
+            "id": "id_oiDuE9RFQ",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "rotation": 0,
+            "visible": true,
+            "autoSize": false,
+            "size": {
+              "width": 385,
+              "height": 86
+            },
+            "shadows": [],
+            "alignment": "center",
+            "contentState": {
+              "entityMap": {},
+              "blocks": [
+                {
+                  "key": "5nree",
+                  "text": "Daaang, you smart! ",
+                  "type": "unstyled",
+                  "depth": 0,
+                  "inlineStyleRanges": [
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "COLOR:hsl(0, 0%, 100%)"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "LETTERSPACING:0"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "ALIGN:center"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "SIZE:36"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "FONT:RobotoCondensed-Bold"
+                    }
+                  ],
+                  "entityRanges": [],
+                  "data": {
+                    "emptyStyle": [
+                      "COLOR:hsl(0, 0%, 100%)",
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "ALIGN:center",
+                      "SIZE:36",
+                      "FONT:RobotoCondensed-Bold"
+                    ]
+                  }
+                },
+                {
+                  "key": "d7kdo",
+                  "text": "You must be a dawg!",
+                  "type": "unstyled",
+                  "depth": 0,
+                  "inlineStyleRanges": [
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "COLOR:hsl(0, 0%, 100%)"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "LETTERSPACING:0"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "LINEHEIGHT:1.2"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "ALIGN:center"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "SIZE:36"
+                    },
+                    {
+                      "offset": 0,
+                      "length": 19,
+                      "style": "FONT:RobotoCondensed-Bold"
+                    }
+                  ],
+                  "entityRanges": [],
+                  "data": {
+                    "emptyStyle": [
+                      "COLOR:hsl(0, 0%, 100%)",
+                      "LETTERSPACING:0",
+                      "LINEHEIGHT:1.2",
+                      "ALIGN:center",
+                      "SIZE:36",
+                      "FONT:RobotoCondensed-Bold"
+                    ]
+                  }
+                }
+              ]
+            },
+            "left": 15,
+            "right": 15,
+            "top": 44,
+            "bottom": null,
+            "width": 384,
+            "height": 125,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "14.470108695652172%",
+            "parentSize": null
+          }
+        },
+        {
+          "componentClass": "Frame",
+          "props": {
+            "key": "Ubg564Yaz",
+            "id": "id_Ubg564Yaz",
+            "willChangeTransform": false,
+            "opacity": 1,
+            "radius": 62,
+            "rotation": 0,
+            "visible": true,
+            "overflow": "visible",
+            "background": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.5,
+              "h": 0,
+              "s": 0,
+              "l": 0,
+              "initialValue": "hsla(0, 0%, 0%, 0.5)",
+              "roundA": 0.5,
+              "format": "hsl"
+            },
+            "shadows": [],
+            "left": 72,
+            "right": 72,
+            "top": null,
+            "bottom": 36,
+            "width": 270,
+            "height": 62,
+            "aspectRatio": null,
+            "centerX": "50%",
+            "centerY": "90.89673913043478%",
+            "parentSize": null
+          },
+          "children": [
+            {
+              "componentClass": "Text",
+              "props": {
+                "key": "C4zatQWkC",
+                "id": "id_C4zatQWkC",
+                "willChangeTransform": false,
+                "opacity": 1,
+                "rotation": 0,
+                "visible": true,
+                "autoSize": true,
+                "size": {
+                  "width": 88,
+                  "height": 25
+                },
+                "shadows": [],
+                "rawHTML": "<div data-offset-key=\"fb2s4-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"fb2s4-0-0\" style=\"tab-size:4;font-weight:700;font-family:&quot;RobotoCondensed-Bold&quot;, &quot;Roboto Condensed&quot;, sans-serif;-webkit-text-fill-color:hsl(0, 0%, 100%);font-size:21px;letter-spacing:0px;line-height:1.2\"><span data-text=\"true\">MIC DROP</span></span></div>",
+                "left": null,
+                "right": 95,
+                "top": null,
+                "bottom": null,
+                "width": 88,
+                "height": 25,
+                "aspectRatio": null,
+                "centerX": "48.51851851851852%",
+                "centerY": "49.193548387096776%",
+                "parentSize": null
+              }
+            }
+          ],
+          "navigationLink": {
+            "navigationTarget": "JGhKO4OsK",
+            "navigationTransition": "push",
+            "navigationTransitionDirection": "right",
+            "navigationTransitionOverrides": {
+              "backdropColor": "rgba(4,4,15,.4)"
+            }
+          }
+        }
+      ],
+      "navigationLink": {
+        "navigationTarget": "mIAQ9Jve8",
+        "navigationTransition": "instant",
+        "navigationTransitionDirection": "left",
+        "navigationTransitionOverrides": {
+          "backdropColor": "rgba(4,4,15,.4)"
+        }
+      }
+    }
+  }
+};
+	const $build_index_js = document.querySelector("#build_index_js")
+	const script = $build_index_js ? $build_index_js.textContent.trim() : ""
+	
+	// need react to have rendered, before we can do setPreviewData
+	setTimeout(() => {
+	    if (script.length > 0) {
+	        setPreviewData(script, data)
+	    } else {
+	        fetch("build/index.js").then((response) => {
+	            return response.text().then((script) => {
+	                setPreviewData(script, data)
+	            })
+	        })
+	    }
+	}, 0)
+	</script>
+</body>
+
+</html>
